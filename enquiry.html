@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parent / Carer Enquiry — Neurodiversity Learning Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><img src="images/nlh-logo.jpeg" alt="NLH Logo"></div><div class="nav-logo-text"><span>NLH</span><span>Neurodiversity Learning Hub</span></div></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="blog.html">Resources</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="btn-get-support active">Get Support</a></li>
+          <li><a href="donate.html" class="btn btn-primary" style="padding:8px 20px;border-radius:50px;font-size:.85rem;">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>›</span><span class="current">Parent / Carer Enquiry</span></nav>
+        <h1>Parent / Carer Enquiry</h1>
+        <p>Tell us about your family's situation and how NLH can support you. We will respond as soon as possible.</p>
+      </div>
+    </section>
+
+    <section class="form-section section-padding">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1.8fr;gap:60px;align-items:start;">
+
+          <div class="fade-up">
+            <span class="section-label">How It Works</span>
+            <h2 style="font-size:1.6rem;margin-bottom:16px;">Getting Support is Simple</h2>
+
+            <div class="steps-grid" style="grid-template-columns:1fr;margin-top:0;">
+              <div class="step-card" style="padding:20px 0;text-align:left;">
+                <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
+                  <div class="step-num" style="width:44px;height:44px;font-size:1rem;flex-shrink:0;margin:0;">1</div>
+                  <h3 style="font-size:1rem;">Submit this form</h3>
+                </div>
+                <p style="font-size:.9rem;padding-left:60px;">Tell us about your child and what support you are looking for.</p>
+              </div>
+              <div class="step-card" style="padding:20px 0;text-align:left;">
+                <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
+                  <div class="step-num" style="width:44px;height:44px;font-size:1rem;flex-shrink:0;margin:0;">2</div>
+                  <h3 style="font-size:1rem;">NLH reviews &amp; responds</h3>
+                </div>
+                <p style="font-size:.9rem;padding-left:60px;">We will review your enquiry and get back to you within 2 working days.</p>
+              </div>
+              <div class="step-card" style="padding:20px 0;text-align:left;">
+                <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
+                  <div class="step-num" style="width:44px;height:44px;font-size:1rem;flex-shrink:0;margin:0;">3</div>
+                  <h3 style="font-size:1rem;">Support begins</h3>
+                </div>
+                <p style="font-size:.9rem;padding-left:60px;">Tailored guidance based on your child's individual needs.</p>
+              </div>
+            </div>
+
+            <div style="padding:20px;background:var(--teal-light);border-radius:var(--radius-md);border-left:4px solid var(--teal);margin-top:24px;">
+              <p style="font-size:.875rem;color:var(--text-mid);">📧 You can also email us directly at <a href="mailto:info@nlhadvocacy.co.uk" style="color:var(--teal);font-weight:600;">info@nlhadvocacy.co.uk</a></p>
+            </div>
+          </div>
+
+          <div class="fade-up delay-2">
+            <div class="form-wrap">
+              <h3 style="margin-bottom:8px;">Parent / Carer Enquiry Form</h3>
+              <p style="font-size:.875rem;color:var(--text-light);margin-bottom:32px;">Fields marked * are required.</p>
+
+              <form data-form="enquiry" novalidate>
+                <h4 style="margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--grey-bg);">Your Details</h4>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="e-fname">First Name *</label>
+                    <input type="text" id="e-fname" required placeholder="First name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="e-lname">Last Name *</label>
+                    <input type="text" id="e-lname" required placeholder="Last name" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="e-email">Email Address *</label>
+                    <input type="email" id="e-email" required placeholder="you@example.com" />
+                  </div>
+                  <div class="form-group">
+                    <label for="e-phone">Phone Number</label>
+                    <input type="tel" id="e-phone" placeholder="Optional" />
+                  </div>
+                </div>
+
+                <h4 style="margin:24px 0 20px;padding-bottom:12px;border-bottom:2px solid var(--grey-bg);">About Your Child</h4>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="e-child-name">Child's First Name *</label>
+                    <input type="text" id="e-child-name" required placeholder="First name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="e-child-age">Child's Age *</label>
+                    <input type="number" id="e-child-age" required min="0" max="25" placeholder="Age (0–25)" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="e-diagnosis">Diagnosis / Identified Needs (if known)</label>
+                  <input type="text" id="e-diagnosis" placeholder="e.g. Autism, ADHD, Dyslexia" />
+                </div>
+                <div class="form-group">
+                  <label for="e-ehcp">Does your child currently have an EHCP?</label>
+                  <select id="e-ehcp">
+                    <option value="">Please select…</option>
+                    <option>Yes — currently in place</option>
+                    <option>In progress — assessment requested</option>
+                    <option>No — considering applying</option>
+                    <option>Not sure</option>
+                  </select>
+                </div>
+
+                <h4 style="margin:24px 0 20px;padding-bottom:12px;border-bottom:2px solid var(--grey-bg);">Support Needed</h4>
+                <div class="form-group">
+                  <label for="e-support">What type of support are you looking for? *</label>
+                  <select id="e-support" required>
+                    <option value="">Please select…</option>
+                    <option>EHCP guidance and application support</option>
+                    <option>EHCP amendment or annual review support</option>
+                    <option>SEND meeting preparation</option>
+                    <option>General SEND advice and guidance</option>
+                    <option>Parent advocacy support</option>
+                    <option>Workshop / training information</option>
+                    <option>Other — please describe below</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="e-details">Tell us more about your situation *</label>
+                  <textarea id="e-details" required placeholder="Please share as much or as little as you feel comfortable. The more information you provide, the better we can support you." style="min-height:160px;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">Submit Enquiry</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo"><div class="nav-logo-icon"><img src="images/nlh-logo.jpeg" alt="NLH Logo"></div><div class="nav-logo-text"><span style="font-size:1rem;color:#fff;">Neurodiversity Learning Hub</span></div></div><p class="tagline">Educate. Navigate. Advocate.</p><p>Supporting families of neurodivergent children aged 0–25.</p><div class="footer-social"><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="TikTok">🎵</a></div></div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="blog.html">Resources</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="faqs.html">FAQs</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="enquiry.html">Parent Enquiry</a></li><li><a href="referral.html">Professional Referral</a></li><li><a href="donate.html">Donate</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@nlhadvocacy.co.uk">📧 info@nlhadvocacy.co.uk</a></li><li><a href="contact.html">Contact Form</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 Neurodiversity Learning Hub. All rights reserved.</span><span>Website: <a href="#" style="color:var(--teal);">www.neurodiversitylearninghub.co.uk</a></span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

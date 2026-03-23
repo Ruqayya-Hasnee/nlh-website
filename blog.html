@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources &amp; Blog — Neurodiversity Learning Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><img src="images/nlh-logo.jpeg" alt="NLH Logo"></div><div class="nav-logo-text"><span>NLH</span><span>Neurodiversity Learning Hub</span></div></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="blog.html" class="active">Resources</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="btn-get-support">Get Support</a></li>
+          <li><a href="donate.html" class="btn btn-primary" style="padding:8px 20px;border-radius:50px;font-size:.85rem;">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>›</span><span class="current">Resources &amp; Blog</span></nav>
+        <h1>Resources &amp; Blog</h1>
+        <p>Practical guidance, parent reflections and neurodiversity awareness from the NLH team.</p>
+      </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section style="background:var(--grey-bg);padding:32px 0;">
+      <div class="container">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;" role="group" aria-label="Filter articles by category">
+          <button onclick="filterBlog('all')"         class="filter-btn active" id="filter-all">All Articles</button>
+          <button onclick="filterBlog('ehcp')"        class="filter-btn" id="filter-ehcp">EHCP Guidance</button>
+          <button onclick="filterBlog('parent')"      class="filter-btn" id="filter-parent">Parent Reflections</button>
+          <button onclick="filterBlog('neuro')"       class="filter-btn" id="filter-neuro">Neurodiversity</button>
+          <button onclick="filterBlog('practical')"   class="filter-btn" id="filter-practical">Practical Guidance</button>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .filter-btn {
+        padding: 10px 24px;
+        border-radius: 50px;
+        border: 2px solid #e8edf5;
+        background: var(--white);
+        color: var(--text-mid);
+        font-family: 'DM Sans', sans-serif;
+        font-size: .875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .filter-btn:hover, .filter-btn.active {
+        background: var(--navy);
+        border-color: var(--navy);
+        color: var(--white);
+      }
+      .blog-card[data-hidden="true"] { display: none; }
+    </style>
+
+    <!-- Blog Grid -->
+    <section class="section-padding" style="background:var(--white);">
+      <div class="container">
+        <div class="blog-grid" id="blog-grid">
+
+          <article class="blog-card fade-up delay-1" data-cat="ehcp">
+            <div class="blog-img teal">📄</div>
+            <div class="blog-body">
+              <p class="blog-cat">EHCP Guidance</p>
+              <h3>Understanding the EHCP Application Process: A Step-by-Step Guide</h3>
+              <p>Everything families need to know about applying for an Education, Health and Care Plan, from the initial request through to the final plan.</p>
+              <div class="blog-meta"><span>5 min read</span><a href="#" class="blog-read-more">Read More →</a></div>
+            </div>
+          </article>
+
+          <article class="blog-card fade-up delay-2" data-cat="parent">
+            <div class="blog-img orange">🧩</div>
+            <div class="blog-body">
+              <p class="blog-cat">Parent Reflections</p>
+              <h3>How Knowing My Rights Changed Everything at Our SEND Meeting</h3>
+              <p>A parent's personal story of how knowledge and preparation transformed a difficult SEND meeting into a positive outcome for their family.</p>
+              <div class="blog-meta"><span>4 min read</span><a href="#" class="blog-read-more">Read More →</a></div>
+            </div>
+          </article>
+
+          <article class="blog-card fade-up delay-3" data-cat="neuro">
+            <div class="blog-img coral">💛</div>
+            <div class="blog-body">
+              <p class="blog-cat">Neurodiversity</p>
+              <h3>What Does Neurodiversity Mean? A Family-Friendly Introduction</h3>
+              <p>A clear and accessible guide to neurodiversity — what it means, why it matters and how understanding it can help your family and child.</p>
+              <div class="blog-meta"><span>3 min read</span><a href="#" class="blog-read-more">Read More →</a></div>
+            </div>
+          </article>
+
+          <article class="blog-card fade-up delay-1" data-cat="practical">
+            <div class="blog-img teal">📋</div>
+            <div class="blog-body">
+              <p class="blog-cat">Practical Guidance</p>
+              <h3>5 Things to Do Before Your Child's EHCP Annual Review</h3>
+              <p>Practical steps parents can take to prepare for their child's annual EHCP review and make sure their voice is heard effectively.</p>
+              <div class="blog-meta"><span>4 min read</span><a href="#" class="blog-read-more">Read More →</a></div>
+            </div>
+          </article>
+
+          <article class="blog-card fade-up delay-2" data-cat="ehcp">
+            <div class="blog-img orange">⚖️</div>
+            <div class="blog-body">
+              <p class="blog-cat">EHCP Guidance</p>
+              <h3>What to Do If Your EHCP Request Is Refused</h3>
+              <p>Understanding your rights and next steps if the Local Authority refuses to carry out an EHC needs assessment for your child.</p>
+              <div class="blog-meta"><span>5 min read</span><a href="#" class="blog-read-more">Read More →</a></div>
+            </div>
+          </article>
+
+          <article class="blog-card fade-up delay-3" data-cat="neuro">
+            <div class="blog-img coral">🌟</div>
+            <div class="blog-body">
+              <p class="blog-cat">Neurodiversity</p>
+              <h3>Supporting a Neurodivergent Child at Home: Practical Ideas for Families</h3>
+              <p>Accessible, evidence-informed ideas for supporting neurodivergent children in everyday home life and routines.</p>
+              <div class="blog-meta"><span>6 min read</span><a href="#" class="blog-read-more">Read More →</a></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo"><div class="nav-logo-icon"><img src="images/nlh-logo.jpeg" alt="NLH Logo"></div><div class="nav-logo-text"><span style="font-size:1rem;color:#fff;">Neurodiversity Learning Hub</span></div></div><p class="tagline">Educate. Navigate. Advocate.</p><p>Supporting families of neurodivergent children aged 0–25.</p><div class="footer-social"><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="TikTok">🎵</a></div></div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="blog.html">Resources</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="faqs.html">FAQs</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="enquiry.html">Parent Enquiry</a></li><li><a href="referral.html">Professional Referral</a></li><li><a href="donate.html">Donate</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@nlhadvocacy.co.uk">📧 info@nlhadvocacy.co.uk</a></li><li><a href="contact.html">Contact Form</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 Neurodiversity Learning Hub. All rights reserved.</span><span>Website: <a href="#" style="color:var(--teal);">www.neurodiversitylearninghub.co.uk</a></span></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function filterBlog(cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('filter-' + cat).classList.add('active');
+      document.querySelectorAll('#blog-grid .blog-card').forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.removeAttribute('data-hidden');
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

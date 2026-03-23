@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support NLH — Neurodiversity Learning Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .donate-method.selected {
+      border-color: var(--teal) !important;
+      background: var(--teal-light) !important;
+      box-shadow: 0 0 0 3px rgba(63,180,196,.15);
+    }
+    .amount-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px; }
+    .amount-btn {
+      padding:14px;border-radius:var(--radius-sm);border:2px solid #e8edf5;
+      background:var(--white);font-family:'DM Sans',sans-serif;font-size:1rem;
+      font-weight:700;color:var(--navy);cursor:pointer;transition:var(--transition);
+    }
+    .amount-btn:hover,.amount-btn.selected{background:var(--navy);border-color:var(--navy);color:#fff;}
+    @media(max-width:480px){.amount-grid{grid-template-columns:repeat(2,1fr);}}
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><img src="images/nlh-logo.jpeg" alt="NLH Logo"></div><div class="nav-logo-text"><span>NLH</span><span>Neurodiversity Learning Hub</span></div></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="blog.html">Resources</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="btn-get-support">Get Support</a></li>
+          <li><a href="donate.html" class="btn btn-primary active" style="padding:8px 20px;border-radius:50px;font-size:.85rem;">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" style="background:linear-gradient(135deg,var(--orange) 0%,#c0521e 100%);">
+      <div class="container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>›</span><span class="current">Support NLH</span></nav>
+        <h1>Support NLH</h1>
+        <p>Your donation helps NLH continue providing vital guidance and advocacy for families navigating SEND pathways.</p>
+      </div>
+    </section>
+
+    <section class="donate-section section-padding">
+      <div class="container">
+        <div class="donate-grid">
+          <div class="fade-up">
+            <span class="section-label">Why Donate</span>
+            <h2>Your Support Makes a Difference</h2>
+            <p>Supporting Neurodiversity Learning Hub helps us continue providing guidance and advocacy for families navigating SEND pathways.</p>
+            <p style="margin-top:12px;">Donations contribute towards developing resources, workshops and support for parents of neurodivergent children across Greater Manchester and beyond.</p>
+
+            <div class="donate-uses">
+              <div class="donate-use-item">
+                <span class="donate-use-icon">📚</span>
+                <div>
+                  <h4>Resources &amp; Guides</h4>
+                  <p>Developing free, accessible resources for families navigating the SEND system.</p>
+                </div>
+              </div>
+              <div class="donate-use-item">
+                <span class="donate-use-icon">🎓</span>
+                <div>
+                  <h4>Parent Workshops</h4>
+                  <p>Funding workshops that empower parents to understand and navigate SEND processes.</p>
+                </div>
+              </div>
+              <div class="donate-use-item">
+                <span class="donate-use-icon">👨‍👩‍👧</span>
+                <div>
+                  <h4>Family Support</h4>
+                  <p>Enabling NLH to support more families who are navigating complex SEND pathways.</p>
+                </div>
+              </div>
+              <div class="donate-use-item">
+                <span class="donate-use-icon">🌐</span>
+                <div>
+                  <h4>Outreach &amp; Awareness</h4>
+                  <p>Raising awareness of neurodiversity and the SEND system to reach more families.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-up delay-2">
+            <div class="form-wrap">
+              <h3 style="margin-bottom:8px;">Make a Donation</h3>
+              <p style="font-size:.875rem;color:var(--text-light);margin-bottom:28px;">Every contribution, however small, makes a real difference to families.</p>
+
+              <!-- Amount selection -->
+              <div style="margin-bottom:28px;">
+                <label style="display:block;font-size:.875rem;font-weight:600;color:var(--navy);margin-bottom:12px;">Choose an Amount</label>
+                <div class="amount-grid" role="group" aria-label="Donation amount">
+                  <button class="amount-btn" onclick="selectAmount(this,'5')">£5</button>
+                  <button class="amount-btn selected" onclick="selectAmount(this,'10')">£10</button>
+                  <button class="amount-btn" onclick="selectAmount(this,'25')">£25</button>
+                  <button class="amount-btn" onclick="selectAmount(this,'50')">£50</button>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <label for="custom-amount">Or enter a custom amount (£)</label>
+                  <input type="number" id="custom-amount" min="1" placeholder="Enter amount" style="margin-top:8px;" />
+                </div>
+              </div>
+
+              <!-- Payment method -->
+              <div style="margin-bottom:28px;">
+                <label style="display:block;font-size:.875rem;font-weight:600;color:var(--navy);margin-bottom:12px;">Choose Payment Method</label>
+                <div class="donate-methods">
+                  <div class="donate-method selected" tabindex="0" role="button" aria-pressed="true">
+                    <div class="method-icon paypal">💙</div>
+                    <div>
+                      <div class="method-name">PayPal</div>
+                      <div class="method-desc">Donate securely via PayPal</div>
+                    </div>
+                  </div>
+                  <div class="donate-method" tabindex="0" role="button" aria-pressed="false">
+                    <div class="method-icon stripe">💳</div>
+                    <div>
+                      <div class="method-name">Card Payment (Stripe)</div>
+                      <div class="method-desc">Pay by debit or credit card</div>
+                    </div>
+                  </div>
+                  <div class="donate-method" tabindex="0" role="button" aria-pressed="false">
+                    <div class="method-icon bank">🏦</div>
+                    <div>
+                      <div class="method-name">Bank Transfer</div>
+                      <div class="method-desc">Transfer directly to NLH's account</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="bank-details" style="display:none;background:var(--grey-bg);border-radius:var(--radius-sm);padding:20px;margin-bottom:24px;border-left:4px solid var(--navy);">
+                <h4 style="margin-bottom:12px;">Bank Transfer Details</h4>
+                <p style="font-size:.875rem;color:var(--text-mid);">Please use the following details and use your name as the payment reference:</p>
+                <p style="font-size:.875rem;margin-top:12px;"><strong>Account Name:</strong> Neurodiversity Learning Hub<br>
+                <strong>Reference:</strong> Your name + Donation<br>
+                <strong>Further details:</strong> Contact us at <a href="mailto:info@nlhadvocacy.co.uk" style="color:var(--teal);">info@nlhadvocacy.co.uk</a></p>
+              </div>
+
+              <button class="btn btn-primary" style="width:100%;justify-content:center;padding:18px;font-size:1rem;" onclick="handleDonate()">
+                💛 Support NLH
+              </button>
+
+              <p style="font-size:.75rem;color:var(--text-light);text-align:center;margin-top:16px;">
+                Neurodiversity Learning Hub is a social enterprise. Donations are used to fund NLH's work supporting families.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact reminder -->
+    <section class="impact-section section-padding">
+      <div class="container">
+        <div class="text-center fade-up" style="margin-bottom:48px;">
+          <span class="section-label">Your Impact</span>
+          <h2>What Your Donation Helps Fund</h2>
+        </div>
+        <div class="impact-grid">
+          <div class="impact-card fade-up delay-1">
+            <span class="impact-num" data-target="25" data-suffix="+">25+</span>
+            <span class="impact-label">Families Already Supported</span>
+          </div>
+          <div class="impact-card fade-up delay-2">
+            <span class="impact-num" data-target="20" data-suffix="+">20+</span>
+            <span class="impact-label">SEND Meetings Supported</span>
+          </div>
+          <div class="impact-card fade-up delay-3">
+            <span class="impact-num" data-target="15" data-suffix="+">15+</span>
+            <span class="impact-label">EHCPs Assisted</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo"><div class="nav-logo-icon"><img src="images/nlh-logo.jpeg" alt="NLH Logo"></div><div class="nav-logo-text"><span style="font-size:1rem;color:#fff;">Neurodiversity Learning Hub</span></div></div><p class="tagline">Educate. Navigate. Advocate.</p><p>Supporting families of neurodivergent children aged 0–25.</p><div class="footer-social"><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="TikTok">🎵</a></div></div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="blog.html">Resources</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="faqs.html">FAQs</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="enquiry.html">Parent Enquiry</a></li><li><a href="referral.html">Professional Referral</a></li><li><a href="donate.html">Donate</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@nlhadvocacy.co.uk">📧 info@nlhadvocacy.co.uk</a></li><li><a href="contact.html">Contact Form</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 Neurodiversity Learning Hub. All rights reserved.</span><span>Website: <a href="#" style="color:var(--teal);">www.neurodiversitylearninghub.co.uk</a></span></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function selectAmount(btn, amount) {
+      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('custom-amount').value = '';
+    }
+
+    // Show bank details when bank transfer selected
+    document.querySelectorAll('.donate-method').forEach((m, i) => {
+      m.addEventListener('click', () => {
+        document.getElementById('bank-details').style.display = (i === 2) ? 'block' : 'none';
+      });
+    });
+
+    function handleDonate() {
+      const btn = event.target;
+      btn.textContent = 'Redirecting…';
+      btn.disabled = true;
+      setTimeout(() => {
+        alert('Thank you for your support! Payment integration to be configured by the developer.');
+        btn.textContent = '💛 Support NLH';
+        btn.disabled = false;
+      }, 800);
+    }
+  </script>
+</body>
+</html>

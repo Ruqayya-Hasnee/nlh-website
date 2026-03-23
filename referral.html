@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Referral — Neurodiversity Learning Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><img src="images/nlh-logo.jpeg" alt="NLH Logo"></div><div class="nav-logo-text"><span>NLH</span><span>Neurodiversity Learning Hub</span></div></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="blog.html">Resources</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="btn-get-support">Get Support</a></li>
+          <li><a href="donate.html" class="btn btn-primary" style="padding:8px 20px;border-radius:50px;font-size:.85rem;">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span>›</span><span class="current">Professional Referral</span></nav>
+        <h1>Professional Referral</h1>
+        <p>Refer a family to NLH using this form. We will follow up with the family directly once we receive your referral.</p>
+      </div>
+    </section>
+
+    <section class="form-section section-padding">
+      <div class="container">
+        <div class="form-wrap fade-up" style="max-width:760px;">
+          <h3 style="margin-bottom:8px;">Professional Referral Form</h3>
+          <p style="font-size:.875rem;color:var(--text-light);margin-bottom:32px;">Please complete all required fields. The family's consent to be referred should be obtained before submitting this form.</p>
+
+          <form data-form="referral" novalidate>
+            <h4 style="margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--grey-bg);">Your Professional Details</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="r-name">Your Full Name *</label>
+                <input type="text" id="r-name" required placeholder="Full name" />
+              </div>
+              <div class="form-group">
+                <label for="r-role">Your Role / Job Title *</label>
+                <input type="text" id="r-role" required placeholder="e.g. SENCO, Social Worker" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="r-org">Organisation / Setting *</label>
+                <input type="text" id="r-org" required placeholder="School, NHS, LA, etc." />
+              </div>
+              <div class="form-group">
+                <label for="r-email">Your Email Address *</label>
+                <input type="email" id="r-email" required placeholder="you@organisation.co.uk" />
+              </div>
+            </div>
+
+            <h4 style="margin:24px 0 20px;padding-bottom:12px;border-bottom:2px solid var(--grey-bg);">Family Details</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="r-family-name">Family / Parent Name *</label>
+                <input type="text" id="r-family-name" required placeholder="Parent / carer name" />
+              </div>
+              <div class="form-group">
+                <label for="r-family-contact">Family Contact (Email or Phone) *</label>
+                <input type="text" id="r-family-contact" required placeholder="Best way to contact family" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="r-child-age">Child's Age *</label>
+                <input type="number" id="r-child-age" required min="0" max="25" placeholder="Age (0–25)" />
+              </div>
+              <div class="form-group">
+                <label for="r-ehcp-status">EHCP Status</label>
+                <select id="r-ehcp-status">
+                  <option value="">Please select…</option>
+                  <option>EHCP in place</option>
+                  <option>EHCP application in progress</option>
+                  <option>No EHCP — considering applying</option>
+                  <option>Not known</option>
+                </select>
+              </div>
+            </div>
+
+            <h4 style="margin:24px 0 20px;padding-bottom:12px;border-bottom:2px solid var(--grey-bg);">Referral Information</h4>
+            <div class="form-group">
+              <label for="r-reason">Reason for Referral *</label>
+              <select id="r-reason" required>
+                <option value="">Please select…</option>
+                <option>EHCP guidance and application support</option>
+                <option>SEND meeting preparation</option>
+                <option>General SEND advice and advocacy</option>
+                <option>Parent support / empowerment</option>
+                <option>Workshop information for family</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="r-notes">Additional Notes</label>
+              <textarea id="r-notes" placeholder="Please share any relevant background information that may help NLH when contacting this family."></textarea>
+            </div>
+
+            <div style="background:var(--teal-light);border-radius:var(--radius-sm);padding:16px 20px;margin-bottom:28px;border-left:3px solid var(--teal);">
+              <p style="font-size:.875rem;color:var(--text-mid);margin:0;">By submitting this form, you confirm that you have obtained the family's consent to be referred to NLH.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">Submit Referral</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo"><div class="nav-logo-icon"><img src="images/nlh-logo.jpeg" alt="NLH Logo"></div><div class="nav-logo-text"><span style="font-size:1rem;color:#fff;">Neurodiversity Learning Hub</span></div></div><p class="tagline">Educate. Navigate. Advocate.</p><p>Supporting families of neurodivergent children aged 0–25.</p><div class="footer-social"><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="Instagram">📷</a><a href="#" aria-label="TikTok">🎵</a></div></div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="workshops.html">Workshops</a></li><li><a href="blog.html">Resources</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="faqs.html">FAQs</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="enquiry.html">Parent Enquiry</a></li><li><a href="referral.html">Professional Referral</a></li><li><a href="donate.html">Donate</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@nlhadvocacy.co.uk">📧 info@nlhadvocacy.co.uk</a></li><li><a href="contact.html">Contact Form</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 Neurodiversity Learning Hub. All rights reserved.</span><span>Website: <a href="#" style="color:var(--teal);">www.neurodiversitylearninghub.co.uk</a></span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
